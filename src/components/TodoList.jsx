@@ -5,7 +5,12 @@ const TodoList = props => {
   return (
     <ul>
       {props.todos.map(todo => (
-        <Todo text={todo.text} key={todo.id} />
+        <Todo
+          text={todo.text}
+          key={todo.id}
+          {...todo}
+          onClick={() => props.toggleTodo(todo.id)}
+        />
       ))}
     </ul>
   );

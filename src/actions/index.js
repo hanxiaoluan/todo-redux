@@ -4,3 +4,17 @@ export const addTodo = text => ({
   id: nextTextId++,
   text
 });
+export const toggleTodo = id => ({
+  type: "TOGGLE_TODO",
+  id
+});
+export const setVisibilityFilter = filter => ({
+  type: "SET_VISIBILITY_FILTER",
+  filter
+});
+
+export const VisibilityFilter = {
+  SHOW_ALL: "SHOW_ALL",
+  SHOW_COMPLETED: "SHOW_COMPLETED",
+  SHOW_ACTIVE: "SHOW_ACTIVE"
+};
